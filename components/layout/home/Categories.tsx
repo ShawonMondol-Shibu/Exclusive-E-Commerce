@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Categories() {
   return (
-    <main className="py-20 container border-y-2 m-auto space-y-16">
+    <main className="py-20 container  border-y-2 m-auto space-y-16">
       <div className="flex items-center justify-between gap-5">
         <ContentTitle tag="Categories" title="Browse By Category" />
         <div className="flex items-center gap-2">
