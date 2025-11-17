@@ -25,6 +25,10 @@ export default function ProductCard() {
             {Array.from({ length: 5 }).map((_, index) => (
               <Star key={index} fill="orange" stroke="orange" size={16} />
             ))}
+            <small>
+
+            (88)
+            </small>
           </span>
         </div>
       </CardContent>

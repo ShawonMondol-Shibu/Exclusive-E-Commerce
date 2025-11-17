@@ -6,10 +6,11 @@ import ProductCard from "../ProductCard";
 
 export default function Todays() {
   return (
-    <main className="mt-40 w-full">
+    <main className="mt-40 w-full grid gap-10">
+
+
       <div className="container m-auto px-4 flex justify-between items-end">
         <ContentTitle tag="Today's" title="Flash Sales" />
-
         <div className="flex items-center gap-2">
           <Button
             variant={"secondary"}
@@ -28,7 +29,7 @@ export default function Todays() {
         </div>
       </div>
 
-      <section className="flex items-center gap-5">
+      <section className="flex items-center justify-center gap-5">
         {Array.from({ length: 4 }).map((_, i) => (
           <ProductCard key={i} />
         ))}
@@ -36,7 +37,7 @@ export default function Todays() {
 
 
 
-      <Button variant={"destructive"} size={'lg'} className="rounded m-auto font-medium">view All Products</Button>
+      <Button variant={"destructive"} size={'lg'} className="rounded font-medium w-fit m-auto">view All Products</Button>
     </main>
   );
 }
