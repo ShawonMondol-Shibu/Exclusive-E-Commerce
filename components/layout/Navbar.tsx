@@ -1,4 +1,3 @@
-import { Heart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import NavbarSearch from "./NavbarSearch";
@@ -12,7 +11,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="border-b">
+    <nav className="border-b sticky top-0 bg-white/30 backdrop-blur backdrop-brightness-125 backdrop-saturate-150 z-50 ">
       <div className="flex items-center justify-between container m-auto py-4">
         <span className="text-2xl font-bold">Exclusive</span>
 
