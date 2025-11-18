@@ -10,13 +10,21 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { toast } from "sonner";
 
 // Zod Schema
 const contactSchema = z.object({
@@ -45,7 +53,7 @@ export default function ContactSection() {
   const onSubmit = (data: ContactFormData) => {
     console.log("Form submitted:", data);
     // Handle form submission (e.g., send to API)
-    alert("Thank you! We will contact you soon.");
+    toast.success("Thank you! We will contact you soon.");
     form.reset();
   };
 
@@ -53,17 +61,29 @@ export default function ContactSection() {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Breadcrumb */}
-        <nav className="text-sm text-gray-500 mb-8">
-          Home / <span className="text-black font-medium">Contact</span>
-        </nav>
+        <Breadcrumb className="pb-16">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Left Sidebar */}
-          <Card className="p-8 h-fit shadow-sm border-0 bg-white">
+          <Card className="p-8 h-fit shadow-sm border-0 bg-white rounded">
             <div className="space-y-8">
               {/* Call To Us */}
               <div className="flex gap-4">
-                <div className="bg-red-100 text-red-600 rounded-full p-3 w-12 h-12 flex-shrink-0">
+                <div className="bg-red-100 text-red-600 rounded-full p-3 w-12 h-12 shrink-0">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -81,7 +101,7 @@ export default function ContactSection() {
 
               {/* Write To Us */}
               <div className="flex gap-4">
-                <div className="bg-red-100 text-red-600 rounded-full p-3 w-12 h-12 flex-shrink-0">
+                <div className="bg-red-100 text-red-600 rounded-full p-3 w-12 h-12 shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -92,18 +112,19 @@ export default function ContactSection() {
                   <p className="text-sm text-gray-600 mt-1">
                     Emails: customer@exclusive.com
                   </p>
-                  <p className="text-sm text-gray-600">
-                    support@exclusive.com
-                  </p>
+                  <p className="text-sm text-gray-600">support@exclusive.com</p>
                 </div>
               </div>
             </div>
           </Card>
 
           {/* Contact Form */}
-          <Card className="p-8 shadow-sm border-0 bg-white md:col-span-2">
+          <Card className="p-8 shadow-sm border-0 bg-white md:col-span-2 rounded">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 {/* Name, Email, Phone */}
                 <div className="grid sm:grid-cols-3 gap-4">
                   <FormField
@@ -182,7 +203,7 @@ export default function ContactSection() {
                 <div className="text-right">
                   <Button
                     type="submit"
-                    className="bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-md font-medium transition"
+                    className="bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded font-medium transition"
                   >
                     Send Message
                   </Button>

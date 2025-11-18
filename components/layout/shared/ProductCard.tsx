@@ -2,9 +2,11 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "../../ui/card";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductCard() {
   return (
+    <Link href={'/product-details/:id'}>
     <Card className="w-72 rounded shadow-none border-none ">
       <CardHeader className=" bg-[#F5F5F5] py-6">
         <div className="flex items-center justify-center">
@@ -32,5 +34,6 @@ export default function ProductCard() {
         </div>
       </CardContent>
     </Card>
+    </Link>
   );
 }

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-'use client'
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -48,9 +48,9 @@ export default function Header() {
 
   return (
     <div className="container mx-auto flex gap-10 items-start px-4 pt-8">
-      <HeaderSidebar className=""/>
+      <HeaderSidebar className="" />
 
-      <div className="flex-1 pt-10">
+      <div className="flex-1 pt-10 overflow-hidden">
         <Carousel
           setApi={setApi}
           plugins={[
@@ -64,50 +64,40 @@ export default function Header() {
           className="w-full overflow-hidden"
         >
           <CarouselContent>
-            {/* Slide 1 */}
-            <CarouselItem className="bg-black text-white">
-              <div className="flex items-center justify-between min-h-[420px] px-12 py-8">
-                <div className="max-w-md space-y-8">
-                  <div className="flex items-center gap-5">
-                    <FaApple size={48} />
-                    <p className="text-lg tracking-wider">iPhone 14 Series</p>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <CarouselItem key={i} className="bg-black text-white">
+                <div className="flex items-center justify-between min-h-[420px] px-12 py-8">
+                  <div className="max-w-md space-y-8">
+                    <div className="flex items-center gap-5">
+                      <FaApple size={48} />
+                      <p className="text-lg tracking-wider">iPhone 14 Series</p>
+                    </div>
+                    <h2 className="text-6xl font-bold leading-tight">
+                      Up to 10% <br /> off Voucher
+                    </h2>
+                    <Link
+                      href="#"
+                      className="inline-flex items-center gap-2 text-lg font-medium hover:gap-4 transition-all"
+                    >
+                      <span className="underline underline-offset-4">
+                        Shop Now
+                      </span>
+                      <span className="text-2xl">&rarr;</span>
+                    </Link>
                   </div>
-                  <h2 className="text-6xl font-bold leading-tight">
-                    Up to 10% <br /> off Voucher
-                  </h2>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-2 text-lg font-medium hover:gap-4 transition-all"
-                  >
-                    <span className="underline underline-offset-4">Shop Now</span>
-                    <span className="text-2xl">&rarr;</span>
-                  </Link>
+                  <div className="relative">
+                    <Image
+                      src="/images/iphone.png"
+                      alt="iPhone 14 Series"
+                      width={550}
+                      height={550}
+                      className="object-contain drop-shadow-2xl -rotate-12 translate-x-10"
+                      priority
+                    />
+                  </div>
                 </div>
-                <div className="relative">
-                  <Image
-                    src="/images/iphone.png"
-                    alt="iPhone 14 Series"
-                    width={550}
-                    height={550}
-                    className="object-contain drop-shadow-2xl -rotate-12 translate-x-10"
-                    priority
-                  />
-                </div>
-              </div>
-            </CarouselItem>
-
-            {/* Add more slides here if you want */}
-            {/* Example duplicate slide for testing */}
-            <CarouselItem className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-              <div className="flex items-center justify-center min-h-[420px]">
-                <h2 className="text-6xl font-bold">Slide 2</h2>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="bg-gradient-to-r from-green-600 to-teal-600 text-white">
-              <div className="flex items-center justify-center min-h-[420px]">
-                <h2 className="text-6xl font-bold">Slide 3</h2>
-              </div>
-            </CarouselItem>
+              </CarouselItem>
+            ))}
           </CarouselContent>
 
           {/* Dynamic Dots - Exact design match */}
