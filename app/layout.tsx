@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/shared/Navbar";
+import Navbar from "@/components/layout/shared/navbar/Navbar";
 import TopHeader from "@/components/layout/shared/Top-header";
 import Footer from "@/components/layout/shared/footer/Footer";
 
@@ -33,7 +33,7 @@ export default function RootLayout({
         <TopHeader />
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

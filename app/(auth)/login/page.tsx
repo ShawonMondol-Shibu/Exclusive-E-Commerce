@@ -93,12 +93,18 @@ export default function Page() {
             )}
           />
 
-          <Button variant={"destructive"} size={"lg"} className="rounded">
+<div className="flex items-center justify-between">
+
+          <Button variant={"destructive"} size={"lg"} className="rounded px-10 py-6">
             Log in
           </Button>
-          <Button variant={"outline"} size={"lg"} className="rounded">
-            Forget Password
+          <Button variant={"link"} asChild className="text-destructive
+          ">
+            <Link href={'/forget'}>
+            Forget Password?
+            </Link>
           </Button>
+</div>
         </form>
       </Form>
     </>

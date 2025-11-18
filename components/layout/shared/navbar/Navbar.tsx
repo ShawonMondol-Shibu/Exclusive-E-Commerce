@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import NavbarSearch from "./NavbarSearch";
+import { User2 } from "lucide-react";
 
 export default function Navbar() {
   const navLinks = [
@@ -77,6 +78,8 @@ export default function Navbar() {
               strokeLinejoin="round"
             />
           </svg>
+
+          <User2/>
         </div>
       </div>
     </nav>

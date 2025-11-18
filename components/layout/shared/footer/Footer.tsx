@@ -46,11 +46,11 @@ export default function Footer() {
 
             <div className="flex gap-4">
               <Image
-                src="/qr-code.png"
+                src="/images/qr-code.png"
                 alt="QR Code"
                 width={80}
                 height={80}
-                className="rounded-lg"
+                className="rounded"
               />
               <div className="flex flex-col justify-center gap-2">
                 <Link href="#">
@@ -63,7 +63,7 @@ export default function Footer() {
                 </Link>
                 <Link href="#">
                   <Image
-                    src="/app-store-badge.svg"
+                    src="/app-store-badge.png"
                     alt="App Store"
                     width={120}
                     height={40}
