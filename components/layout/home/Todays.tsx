@@ -2,7 +2,7 @@ import React from "react";
 import ContentTitle from "./ContentTitle";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import ProductCard from "../ProductCard";
+import ProductCard from "../shared/ProductCard";
 
 export default function Todays() {
   return (

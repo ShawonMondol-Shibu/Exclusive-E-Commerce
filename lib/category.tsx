@@ -1,4 +1,4 @@
-const phone = ({className}:{className:string}) => (
+const phone = ({ className }: { className: string }) => (
   <svg
     width="56"
     height="56"
@@ -46,7 +46,7 @@ const phone = ({className}:{className:string}) => (
   </svg>
 );
 
-const computer = ({className}:{className:string}) => (
+const computer = ({ className }: { className: string }) => (
   <svg
     width="56"
     height="56"
@@ -84,7 +84,12 @@ const computer = ({className}:{className:string}) => (
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path d="M8 32H48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M8 32H48"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </g>
     <defs>
       <clipPath id="clip0_838_613">
@@ -94,7 +99,7 @@ const computer = ({className}:{className:string}) => (
   </svg>
 );
 
-const smartWatch = ({className}:{className:string}) => (
+const smartWatch = ({ className }: { className: string }) => (
   <svg
     width="56"
     height="56"
@@ -161,7 +166,7 @@ const smartWatch = ({className}:{className:string}) => (
   </svg>
 );
 
-const camera = ({className}:{className:string}) => (
+const camera = ({ className }: { className: string }) => (
   <svg
     width="56"
     height="56"
@@ -194,7 +199,7 @@ const camera = ({className}:{className:string}) => (
   </svg>
 );
 
-const headset = ({className}:{className:string}) => (
+const headset = ({ className }: { className: string }) => (
   <svg
     width="56"
     height="56"
@@ -234,7 +239,7 @@ const headset = ({className}:{className:string}) => (
   </svg>
 );
 
-const gaming = ({className}:{className:string}) => (
+const gaming = ({ className }: { className: string }) => (
   <svg
     width="56"
     height="56"

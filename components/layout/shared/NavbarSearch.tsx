@@ -1,10 +1,11 @@
 import React from "react";
+
+import { Search } from "lucide-react";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "../ui/input-group";
-import { Search } from "lucide-react";
+} from "@/components/ui/input-group";
 
 export default function NavbarSearch() {
   return (

@@ -6,8 +6,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../ui/accordion";
+import { cn } from "@/lib/utils";
 
-export default function HeaderSidebar() {
+export default function HeaderSidebar({className}:{className:string}) {
   const navLinks = [
     { title: "Electronics" },
     { title: "Home & Lifestyle" },
@@ -18,7 +19,7 @@ export default function HeaderSidebar() {
     { title: "Health & Beauty" },
   ];
   return (
-    <aside className="grid items-center border-r pr-4 pt-8">
+    <aside className={cn(`grid items-center border-r pr-4 pt-8`, className)}>
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>Woman’s Fashion</AccordionTrigger>

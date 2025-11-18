@@ -1,6 +1,6 @@
 import React from "react";
 import ContentTitle from "./ContentTitle";
-import ProductCard from "../ProductCard";
+import ProductCard from "../shared/ProductCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -32,7 +32,13 @@ export default function OurProducts() {
         ))}
       </section>
 
-      <Button variant={'destructive'} size={'lg'} className="rounded w-fit m-auto">View All Products</Button>
+      <Button
+        variant={"destructive"}
+        size={"lg"}
+        className="rounded w-fit m-auto"
+      >
+        View All Products
+      </Button>
     </main>
   );
 }
